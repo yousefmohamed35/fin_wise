@@ -1,4 +1,5 @@
-import 'package:fin_wise/feature/splash/presentation/view/splash_view.dart';
+import 'package:fin_wise/core/routes/app_routes.dart';
+
 import 'package:flutter/material.dart';
 
 class FinWiseApp extends StatelessWidget {
@@ -6,8 +7,9 @@ class FinWiseApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: SplashView());
+      routerConfig: AppRoutes.router,
+    );
   }
 }
