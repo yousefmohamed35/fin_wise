@@ -12,7 +12,7 @@ abstract class TextStyles {
     return GoogleFonts.poppins(
       color: color,
       fontSize: fontSize ?? 20,
-      fontWeight: FontWeight.w600
+      fontWeight: FontWeight.bold
     );
   }
   static TextStyle subTitle({required Color color, double? fontSize}) {

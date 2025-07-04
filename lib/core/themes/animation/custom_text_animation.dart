@@ -13,8 +13,9 @@ class CustomTextAnimation extends StatelessWidget {
       animatedTexts: [
         TyperAnimatedText(
           title,
+          textAlign: TextAlign.center,
           speed: const Duration(milliseconds: 300),
-          textStyle: TextStyles.title(color: ColorManager.white),
+          textStyle: TextStyles.title(color: ColorManager.white, fontSize: 40),
         ),
       ],
       totalRepeatCount: 1,
