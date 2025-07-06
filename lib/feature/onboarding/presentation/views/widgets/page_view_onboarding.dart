@@ -18,6 +18,7 @@ class _PageViewOnboardingState extends State<PageViewOnboarding> {
     return Stack(
       children: [
         PageView(
+          onPageChanged: (value) {},
           controller: controller,
           children: [OnboardingWelcomeBody(), OnboardingWelcomBodyTwo()],
         ),

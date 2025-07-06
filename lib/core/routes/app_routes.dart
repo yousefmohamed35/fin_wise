@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 
+import '../../feature/auth/presentation/view/launch_view.dart';
 import '../../feature/onboarding/presentation/views/onboarding_view.dart';
 import '../../feature/splash/presentation/view/splash_view.dart';
 import 'routes.dart';
@@ -14,6 +15,10 @@ abstract class AppRoutes {
       GoRoute(
         path: Routes.onboarding,
         builder: (context, state) => OnboardingView(),
+      ),
+      GoRoute(
+        path: Routes.launch,
+        builder: (context, state) => const LaunchView(),
       ),
     ],
   );

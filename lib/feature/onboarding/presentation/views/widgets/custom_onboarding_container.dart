@@ -3,8 +3,14 @@ import '../../../../../core/themes/color_manager.dart';
 import '../../../../../core/themes/text_style.dart';
 
 class CustomOnboardingContainer extends StatelessWidget {
-  const CustomOnboardingContainer({super.key, required this.image});
+  const CustomOnboardingContainer({
+    super.key,
+    required this.image,
+    required this.title, this.onPressed,
+  });
   final String image;
+  final String title;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -40,7 +46,13 @@ class CustomOnboardingContainer extends StatelessWidget {
             ],
           ),
           SizedBox(height: 30),
-          Text('Next', style: TextStyles.title(color: ColorManager.bar)),
+          TextButton(
+            onPressed: onPressed,
+            child: Text(
+            title,
+              style: TextStyles.title(color: ColorManager.bar),
+            ),
+          ),
         ],
       ),
     );

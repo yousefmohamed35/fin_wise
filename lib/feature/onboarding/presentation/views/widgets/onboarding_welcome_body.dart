@@ -15,7 +15,7 @@ class OnboardingWelcomeBody extends StatelessWidget {
         SizedBox(height: 60),
 
         Expanded(
-          child: CustomOnboardingContainer(image: AppImages.onboardingOnee),
+          child: CustomOnboardingContainer(image: AppImages.onboardingOnee, title: 'Next',),
         ),
       ],
     );

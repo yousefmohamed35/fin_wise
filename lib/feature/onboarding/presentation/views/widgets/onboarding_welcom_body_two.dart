@@ -1,4 +1,6 @@
+import 'package:fin_wise/core/routes/routes.dart';
 import 'package:flutter/widgets.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_images.dart';
 import 'custom_onboarding_container.dart';
@@ -18,7 +20,13 @@ class OnboardingWelcomBodyTwo extends StatelessWidget {
         SizedBox(height: 20),
 
         Expanded(
-          child: CustomOnboardingContainer(image: AppImages.onboardingTwo),
+          child: CustomOnboardingContainer(
+            image: AppImages.onboardingTwo,
+            title: 'Get Started',
+            onPressed: () {
+              GoRouter.of(context).pushReplacement(Routes.launch);
+            },
+          ),
         ),
       ],
     );
