@@ -1,5 +1,7 @@
 import 'package:flutter/widgets.dart';
 
+import '../../../../../core/utils/app_images.dart';
+import 'custom_onboarding_container.dart';
 import 'title_text_onboarding.dart';
 
 class OnboardingWelcomBodyTwo extends StatelessWidget {
@@ -12,6 +14,11 @@ class OnboardingWelcomBodyTwo extends StatelessWidget {
         SizedBox(height: 100),
         TitleTextOnboarding(
           text: 'Are You Ready To Take Control Of Your Finances?',
+        ),
+        SizedBox(height: 20),
+
+        Expanded(
+          child: CustomOnboardingContainer(image: AppImages.onboardingTwo),
         ),
       ],
     );

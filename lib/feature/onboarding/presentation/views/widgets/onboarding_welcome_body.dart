@@ -1,4 +1,6 @@
+import 'package:fin_wise/core/utils/app_images.dart';
 import 'package:flutter/material.dart';
+import 'custom_onboarding_container.dart';
 import 'title_text_onboarding.dart';
 
 class OnboardingWelcomeBody extends StatelessWidget {
@@ -10,7 +12,11 @@ class OnboardingWelcomeBody extends StatelessWidget {
       children: [
         SizedBox(height: 100),
         TitleTextOnboarding(text: 'Welcome To Expense Manager'),
-        
+        SizedBox(height: 20),
+
+        Expanded(
+          child: CustomOnboardingContainer(image: AppImages.onboardingOnee),
+        ),
       ],
     );
   }
