@@ -31,10 +31,15 @@ class CustomOnboardingContainer extends StatelessWidget {
                 ),
               ),
 
-              Image.asset(image, width: 300, height: 300),
+              Image.asset(
+                image,
+                width: 300,
+                height: 300,
+                filterQuality: FilterQuality.high,
+              ),
             ],
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 30),
           Text('Next', style: TextStyles.title(color: ColorManager.bar)),
         ],
       ),

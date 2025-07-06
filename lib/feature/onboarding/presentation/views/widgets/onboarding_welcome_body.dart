@@ -12,7 +12,7 @@ class OnboardingWelcomeBody extends StatelessWidget {
       children: [
         SizedBox(height: 100),
         TitleTextOnboarding(text: 'Welcome To Expense Manager'),
-        SizedBox(height: 20),
+        SizedBox(height: 60),
 
         Expanded(
           child: CustomOnboardingContainer(image: AppImages.onboardingOnee),
