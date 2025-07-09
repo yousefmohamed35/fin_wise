@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/themes/color_manager.dart';
-import '../../../../../core/themes/text_style.dart';
+import '../../../../../core/widgets/custom_text_button.dart';
 
 class CustomOnboardingContainer extends StatelessWidget {
   const CustomOnboardingContainer({
@@ -46,15 +46,10 @@ class CustomOnboardingContainer extends StatelessWidget {
             ],
           ),
           SizedBox(height: 30),
-          TextButton(
-            onPressed: onPressed,
-            child: Text(
-            title,
-              style: TextStyles.title(color: ColorManager.bar),
-            ),
-          ),
+          CustomTextButton(onPressed: onPressed, title: title),
         ],
       ),
     );
   }
 }
+
