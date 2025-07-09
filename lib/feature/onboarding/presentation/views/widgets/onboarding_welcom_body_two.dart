@@ -1,10 +1,9 @@
 import 'package:fin_wise/core/routes/routes.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../../../../core/utils/app_images.dart';
-import 'custom_onboarding_container.dart';
-import 'title_text_onboarding.dart';
+import '../../../../../core/widgets/custom_container.dart';
+import '../../../../../core/widgets/title_text.dart';
 
 class OnboardingWelcomBodyTwo extends StatelessWidget {
   const OnboardingWelcomBodyTwo({super.key});
@@ -14,13 +13,11 @@ class OnboardingWelcomBodyTwo extends StatelessWidget {
     return Column(
       children: [
         SizedBox(height: 100),
-        TitleTextOnboarding(
-          text: 'Are You Ready To Take Control Of Your Finances?',
-        ),
+        TitleText(text: 'Are You Ready To Take Control Of Your Finances?'),
         SizedBox(height: 20),
 
         Expanded(
-          child: CustomOnboardingContainer(
+          child: CustomContainer(
             image: AppImages.onboardingTwo,
             title: 'Get Started',
             onPressed: () {
