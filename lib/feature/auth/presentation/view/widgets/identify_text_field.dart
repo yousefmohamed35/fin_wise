@@ -8,9 +8,12 @@ class IdentifyTextField extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: TextStyles.subTitle(color: ColorManager.lettersAndIcons),
+    return Align(
+      alignment: AlignmentGeometry.topLeft,
+      child: Text(
+        title,
+        style: TextStyles.subTitle(color: ColorManager.lettersAndIcons),
+      ),
     );
   }
 }
