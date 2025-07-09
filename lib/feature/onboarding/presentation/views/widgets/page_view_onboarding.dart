@@ -18,7 +18,6 @@ class _PageViewOnboardingState extends State<PageViewOnboarding> {
     return Stack(
       children: [
         PageView(
-          onPageChanged: (value) {},
           controller: controller,
           children: [OnboardingWelcomeBody(), OnboardingWelcomBodyTwo()],
         ),
@@ -28,7 +27,7 @@ class _PageViewOnboardingState extends State<PageViewOnboarding> {
           right: 0, // this makes it expand across width
           child: Center(child: CustomSmoothIndicator(controller: controller)),
         ),
-      ],
+      ]
     );
   }
 }
