@@ -1,4 +1,5 @@
 import 'package:fin_wise/core/utils/app_images.dart';
+import 'package:fin_wise/feature/onboarding/presentation/views/widgets/onboarding_body.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/widgets/custom_container.dart';
 import '../../../../../core/widgets/title_text.dart';
@@ -17,8 +18,7 @@ class OnboardingWelcomeBody extends StatelessWidget {
 
         Expanded(
           child: CustomContainer(
-            image: AppImages.onboardingOnee,
-            title: 'Next',
+           child: OnboardingBody(image: AppImages.onboardingOnee, onPressed: (){}, title: 'Next'),
           ),
         ),
       ],

@@ -1,3 +1,4 @@
+import 'package:fin_wise/feature/auth/presentation/view/login_view.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../feature/auth/presentation/view/launch_view.dart';
@@ -19,6 +20,10 @@ abstract class AppRoutes {
       GoRoute(
         path: Routes.launch,
         builder: (context, state) => const LaunchView(),
+      ),
+      GoRoute(
+        path: Routes.login,
+        builder: (context, state) => const LoginView(),
       ),
     ],
   );

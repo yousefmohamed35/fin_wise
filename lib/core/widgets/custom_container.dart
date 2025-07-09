@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/themes/color_manager.dart';
-import '../../../../../core/widgets/custom_text_button.dart';
 
 class CustomContainer extends StatelessWidget {
   const CustomContainer({
-    super.key,
-    required this.image,
-    required this.title,
-    this.onPressed,
+    super.key, required this.child,
+   
   });
-  final String image;
-  final String title;
-  final void Function()? onPressed;
+  final Widget child;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,33 +18,7 @@ class CustomContainer extends StatelessWidget {
           topRight: Radius.circular(60),
         ),
       ),
-      child: Column(
-        children: [
-          SizedBox(height: 50),
-          Stack(
-            fit: StackFit.passthrough,
-            alignment: Alignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 35.0),
-                child: CircleAvatar(
-                  radius: 125,
-                  backgroundColor: ColorManager.lightGreen,
-                ),
-              ),
-
-              Image.asset(
-                image,
-                width: 300,
-                height: 300,
-                filterQuality: FilterQuality.high,
-              ),
-            ],
-          ),
-          SizedBox(height: 30),
-          CustomTextButton(onPressed: onPressed, title: title),
-        ],
-      ),
+      child: child,
     );
   }
 }
