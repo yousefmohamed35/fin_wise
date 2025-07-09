@@ -3,6 +3,7 @@ import 'package:fin_wise/core/themes/text_style.dart';
 import 'package:fin_wise/core/widgets/custom_container.dart';
 import 'package:fin_wise/core/widgets/title_text.dart';
 import 'package:fin_wise/feature/auth/presentation/view/widgets/email_text_form_field.dart';
+import 'package:fin_wise/feature/auth/presentation/view/widgets/password_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatelessWidget {
@@ -36,6 +37,7 @@ class LoginView extends StatelessWidget {
                       color: ColorManager.lettersAndIcons,
                     ),
                   ),
+                  PasswordTextFormField(),
                 ],
               ),
             ),
