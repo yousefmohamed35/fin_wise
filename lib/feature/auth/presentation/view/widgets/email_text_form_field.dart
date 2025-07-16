@@ -2,14 +2,14 @@ import 'package:fin_wise/core/themes/color_manager.dart';
 import 'package:fin_wise/core/themes/text_style.dart';
 import 'package:flutter/material.dart';
 
-class EmailTextFormField extends StatelessWidget {
-  const EmailTextFormField({super.key});
-
+class CustomTextFormField extends StatelessWidget {
+  const CustomTextFormField({super.key, required this.hintText});
+  final String hintText;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        hintText: 'example@example.com',
+        hintText: hintText,
         filled: true,
         fillColor: ColorManager.lightGreen,
         border: customBorder(),

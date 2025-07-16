@@ -45,7 +45,13 @@ class LaunchViewBody extends StatelessWidget {
               },
             ),
             SizedBox(height: 10),
-            CustomButton(title: 'Sign Up', color: ColorManager.lightGreen),
+            CustomButton(
+              title: 'Sign Up',
+              color: ColorManager.lightGreen,
+              onTap: () {
+                GoRouter.of(context).go(Routes.signup);
+              },
+            ),
             CustomTextButton(
               onPressed: () {},
               title: 'Forget Password?',

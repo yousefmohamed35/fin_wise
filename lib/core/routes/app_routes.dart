@@ -2,6 +2,7 @@ import 'package:fin_wise/feature/auth/presentation/view/login_view.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../feature/auth/presentation/view/launch_view.dart';
+import '../../feature/auth/presentation/view/signup_view.dart';
 import '../../feature/onboarding/presentation/views/onboarding_view.dart';
 import '../../feature/splash/presentation/view/splash_view.dart';
 import 'routes.dart';
@@ -24,6 +25,10 @@ abstract class AppRoutes {
       GoRoute(
         path: Routes.login,
         builder: (context, state) => const LoginView(),
+      ),
+      GoRoute(
+        path: Routes.signup,
+        builder: (contex, state) => const SignupView(),
       ),
     ],
   );
