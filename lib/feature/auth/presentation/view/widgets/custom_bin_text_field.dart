@@ -1,3 +1,4 @@
+import 'package:fin_wise/core/themes/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -9,29 +10,42 @@ class CustomBinTextField extends StatelessWidget {
     required this.controller,
     required this.focusNode,
     this.onChanged,
+    this.onKeyEvent,
   });
+
   final TextEditingController controller;
   final FocusNode focusNode;
   final void Function(String)? onChanged;
+  final void Function(KeyEvent)? onKeyEvent;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      alignment: Alignment.center,
       width: 40,
       height: 40,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(40),
+        shape: BoxShape.circle,
         border: Border.all(color: ColorManager.primary, width: 2),
       ),
-      child: TextField(
-        controller: controller,
-        focusNode: focusNode,
-        onChanged: onChanged,
-        keyboardType: TextInputType.number,
-        maxLength: 1,
-        textAlign: TextAlign.center,
-        decoration: InputDecoration(border: InputBorder.none, counterText: ''),
-        inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+      child: Center(
+        child: TextField(
+          textAlignVertical: TextAlignVertical.center,
+          style: TextStyles.subTitle(color: ColorManager.bar),
+          cursorHeight: 18,
+          cursorColor: ColorManager.primary,
+          controller: controller,
+          focusNode: focusNode,
+          onChanged: onChanged,
+          keyboardType: TextInputType.number,
+          maxLength: 1,
+          textAlign: TextAlign.center,
+          decoration: const InputDecoration(
+            border: InputBorder.none,
+            counterText: '',
+            isCollapsed: true, // 👈 Important: removes extra padding
+          ),
+          inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+        ),
       ),
     );
   }
