@@ -53,7 +53,9 @@ class LaunchViewBody extends StatelessWidget {
               },
             ),
             CustomTextButton(
-              onPressed: () {},
+              onPressed: () {
+                GoRouter.of(context).go(Routes.forget);
+              },
               title: 'Forget Password?',
               size: 14,
             ),
