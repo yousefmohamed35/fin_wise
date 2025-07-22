@@ -1,4 +1,5 @@
 import 'package:fin_wise/feature/auth/presentation/view/login_view.dart';
+import 'package:fin_wise/feature/auth/presentation/view/security_bin_view.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../feature/auth/presentation/view/forget_password_view.dart';
@@ -34,6 +35,10 @@ abstract class AppRoutes {
       GoRoute(
         path: Routes.forget,
         builder: (context, state) => const ForgetPasswordView(),
+      ),
+       GoRoute(
+        path: Routes.securityBin,
+        builder: (context, state) => const SecurityBinView(),
       )
     ],
   );

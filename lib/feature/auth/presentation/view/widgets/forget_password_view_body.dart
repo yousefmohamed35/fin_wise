@@ -1,6 +1,8 @@
 import 'package:fin_wise/feature/auth/presentation/view/widgets/fit_hieght.dart';
 import 'package:flutter/widgets.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../../core/routes/routes.dart';
 import '../../../../../core/themes/color_manager.dart';
 import '../../../../../core/themes/text_style.dart';
 import '../../../../../core/widgets/custom_button.dart';
@@ -44,7 +46,9 @@ class ForgetPasswordViewBody extends StatelessWidget {
                     Spacer(),
                     Center(
                       child: CustomButton(
-                        onTap: () {},
+                        onTap: () {
+                          GoRouter.of(context).push(Routes.securityBin);
+                        },
                         title: 'Next Step',
                         color: ColorManager.primary,
                       ),
