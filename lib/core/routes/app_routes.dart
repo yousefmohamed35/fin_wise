@@ -1,4 +1,5 @@
 import 'package:fin_wise/feature/auth/presentation/view/login_view.dart';
+import 'package:fin_wise/feature/auth/presentation/view/new_password_view.dart';
 import 'package:fin_wise/feature/auth/presentation/view/security_bin_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -39,7 +40,10 @@ abstract class AppRoutes {
        GoRoute(
         path: Routes.securityBin,
         builder: (context, state) => const SecurityBinView(),
-      )
+      ), GoRoute(
+        path: Routes.newPassword,
+        builder: (context, state) => const NewPasswordView(),
+      ),
     ],
   );
 }

@@ -4,6 +4,8 @@ import 'package:fin_wise/core/widgets/title_text.dart';
 import 'package:fin_wise/feature/auth/presentation/view/widgets/fit_hieght.dart';
 import 'package:fin_wise/feature/auth/presentation/view/widgets/row_bin_field.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../../core/routes/routes.dart';
 import '../../../../../core/themes/color_manager.dart';
 import '../../../../../core/themes/text_style.dart';
 
@@ -32,7 +34,12 @@ class SecurityBinViewBody extends StatelessWidget {
                     Spacer(),
                     RowBinField(),
                     Spacer(),
-                    CustomButton(title: 'Accept', color: ColorManager.primary),
+                    CustomButton(
+                      title: 'Accept',
+                      color: ColorManager.primary,
+                      onTap: () =>
+                          GoRouter.of(context).push(Routes.newPassword),
+                    ),
                     SizedBox(height: 20),
                     CustomButton(
                       title: 'Send Again',
