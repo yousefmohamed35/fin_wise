@@ -8,6 +8,7 @@ import '../../../../../core/widgets/custom_container.dart';
 import '../../../../../core/widgets/custom_text_button.dart';
 import '../../../../../core/widgets/title_text.dart';
 import 'email_text_form_field.dart';
+import 'fit_hieght.dart';
 import 'identify_text_field.dart';
 import 'not_have_account.dart';
 import 'password_text_form_field.dart';
@@ -17,56 +18,64 @@ class LoginViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(height: 50),
-        TitleText(text: 'Welcome'),
-        SizedBox(height: 10),
-        Expanded(
-          child: CustomContainer(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 12),
-              child: Column(
-                children: [
-                  SizedBox(height: 60),
-                  IdentifyTextField(title: 'Username or Email'),
-                  SizedBox(height: 10),
-                  CustomTextFormField(hintText: 'example@example.com'),
-                  SizedBox(height: 30),
-                  IdentifyTextField(title: 'Password'),
-                  SizedBox(height: 10),
-                  PasswordTextFormField(),
-                  SizedBox(height: 30),
-                  CustomButton(title: 'Log in', color: ColorManager.primary),
-                  CustomTextButton(
-                    onPressed: () {},
-                    title: 'Forget Password?',
-                    size: 14,
-                  ),
-                  SizedBox(height: 20),
-                  Text(
-                    'Or sign up with',
-                    style: TextStyles.paragraph(
-                      color: ColorManager.lettersAndIcons,
+    return FitHieght(
+      child: Column(
+        children: [
+          SizedBox(height: 50),
+          TitleText(text: 'Welcome'),
+          SizedBox(height: 10),
+          Expanded(
+            child: CustomContainer(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 30,
+                  vertical: 12,
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(height: 60),
+                    IdentifyTextField(title: 'Username or Email'),
+                    SizedBox(height: 10),
+                    CustomTextFormField(hintText: 'example@example.com'),
+                    SizedBox(height: 30),
+                    IdentifyTextField(title: 'Password'),
+                    SizedBox(height: 10),
+                    PasswordTextFormField(),
+                    SizedBox(height: 30),
+                    CustomButton(title: 'Log in', color: ColorManager.primary),
+                    CustomTextButton(
+                      onPressed: () {},
+                      title: 'Forget Password?',
+                      size: 14,
                     ),
-                  ),
-                  SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(AppIcons.facebook),
-                      SizedBox(width: 24),
-                      SvgPicture.asset(AppIcons.google),
-                    ],
-                  ),
-                  SizedBox(height: 30),
-                  SwitchBetweenLoginAndSignup(question: 'Don\'t have account?', action: 'Sign up',),
-                ],
+                    SizedBox(height: 20),
+                    Text(
+                      'Or sign up with',
+                      style: TextStyles.paragraph(
+                        color: ColorManager.lettersAndIcons,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SvgPicture.asset(AppIcons.facebook),
+                        SizedBox(width: 24),
+                        SvgPicture.asset(AppIcons.google),
+                      ],
+                    ),
+                    SizedBox(height: 30),
+                    SwitchBetweenLoginAndSignup(
+                      question: 'Don\'t have account?',
+                      action: 'Sign up',
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

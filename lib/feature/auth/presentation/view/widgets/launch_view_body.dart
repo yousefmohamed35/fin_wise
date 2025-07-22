@@ -41,7 +41,7 @@ class LaunchViewBody extends StatelessWidget {
               title: 'Log in',
               color: ColorManager.primary,
               onTap: () {
-                GoRouter.of(context).go(Routes.login);
+                GoRouter.of(context).push(Routes.login);
               },
             ),
             SizedBox(height: 10),
@@ -49,12 +49,12 @@ class LaunchViewBody extends StatelessWidget {
               title: 'Sign Up',
               color: ColorManager.lightGreen,
               onTap: () {
-                GoRouter.of(context).go(Routes.signup);
+                GoRouter.of(context).push(Routes.signup);
               },
             ),
             CustomTextButton(
               onPressed: () {
-                GoRouter.of(context).go(Routes.forget);
+                GoRouter.of(context).push(Routes.forget);
               },
               title: 'Forget Password?',
               size: 14,
