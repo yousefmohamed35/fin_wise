@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import '../../../../../core/routes/routes.dart';
 import '../../../../../core/themes/color_manager.dart';
 import '../../../../../core/themes/text_style.dart';
 import '../../../../../core/utils/app_icons.dart';
@@ -8,7 +10,7 @@ import '../../../../../core/widgets/custom_container.dart';
 import '../../../../../core/widgets/custom_text_button.dart';
 import '../../../../../core/widgets/title_text.dart';
 import 'email_text_form_field.dart';
-import 'fit_hieght.dart';
+import '../../../../../core/widgets/fit_hieght.dart';
 import 'identify_text_field.dart';
 import 'not_have_account.dart';
 import 'password_text_form_field.dart';
@@ -42,7 +44,13 @@ class LoginViewBody extends StatelessWidget {
                     SizedBox(height: 10),
                     PasswordTextFormField(),
                     SizedBox(height: 30),
-                    CustomButton(title: 'Log in', color: ColorManager.primary),
+                    CustomButton(
+                      onTap: () {
+                        GoRouter.of(context).go(Routes.home);
+                      },
+                      title: 'Log in',
+                      color: ColorManager.primary,
+                    ),
                     CustomTextButton(
                       onPressed: () {},
                       title: 'Forget Password?',

@@ -1,4 +1,4 @@
-import 'package:fin_wise/feature/auth/presentation/view/widgets/fit_hieght.dart';
+import 'package:fin_wise/core/widgets/fit_hieght.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 

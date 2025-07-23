@@ -1,7 +1,7 @@
 import 'package:fin_wise/core/widgets/custom_button.dart';
 import 'package:fin_wise/core/widgets/custom_container.dart';
 import 'package:fin_wise/core/widgets/title_text.dart';
-import 'package:fin_wise/feature/auth/presentation/view/widgets/fit_hieght.dart';
+import 'package:fin_wise/core/widgets/fit_hieght.dart';
 import 'package:fin_wise/feature/auth/presentation/view/widgets/row_bin_field.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
