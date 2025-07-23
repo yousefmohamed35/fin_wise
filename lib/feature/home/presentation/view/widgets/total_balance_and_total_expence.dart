@@ -9,17 +9,20 @@ class TotalBalanceAndTotalExpence extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        TotalBalance(),
-        SizedBox(
-          height: 42,
-          child: VerticalDivider(color: ColorManager.lightGreen),
-        ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          TotalBalance(),
+          SizedBox(
+            height: 42,
+            child: VerticalDivider(color: ColorManager.lightGreen),
+          ),
 
-        TotalExpense(),
-      ],
+          TotalExpense(),
+        ],
+      ),
     );
   }
 }
