@@ -5,20 +5,19 @@ import 'total_balance.dart';
 import 'total_expense.dart';
 
 class TotalBalanceAndTotalExpence extends StatelessWidget {
-  const TotalBalanceAndTotalExpence({
-    super.key,
-  });
+  const TotalBalanceAndTotalExpence({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         TotalBalance(),
         SizedBox(
           height: 42,
           child: VerticalDivider(color: ColorManager.lightGreen),
         ),
-    
+
         TotalExpense(),
       ],
     );
