@@ -1,6 +1,7 @@
 import 'package:fin_wise/feature/auth/presentation/view/login_view.dart';
 import 'package:fin_wise/feature/auth/presentation/view/new_password_view.dart';
 import 'package:fin_wise/feature/auth/presentation/view/security_bin_view.dart';
+import 'package:fin_wise/feature/home/presentation/view/home_view.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../feature/auth/presentation/view/forget_password_view.dart';
@@ -43,6 +44,10 @@ abstract class AppRoutes {
       ), GoRoute(
         path: Routes.newPassword,
         builder: (context, state) => const NewPasswordView(),
+      ),
+      GoRoute(
+        path: Routes.home,
+        builder: (context, state) => const HomeView(),
       ),
     ],
   );
