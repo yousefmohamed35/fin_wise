@@ -1,4 +1,5 @@
 import 'package:fin_wise/core/themes/text_style.dart';
+import 'package:fin_wise/feature/home/presentation/view/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/themes/color_manager.dart';
@@ -31,6 +32,7 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ),
+      body: HomeViewBody(),
     );
   }
 }
