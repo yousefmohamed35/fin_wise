@@ -3,8 +3,9 @@ import 'package:fin_wise/core/widgets/fit_hieght.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/themes/color_manager.dart';
 import '../../../../../core/themes/text_style.dart';
-import 'custom_ciruclar_progress_indicator.dart';
 import 'custom_linear_progress_indicator.dart';
+import 'savings_goal_card.dart';
+
 import 'total_balance_and_total_expence.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -26,18 +27,13 @@ class HomeViewBody extends StatelessWidget {
           SizedBox(height: 1),
           Expanded(
             child: CustomContainer(
-              child: Column(
-                children: [
-                  SizedBox(height: 20),
-                  Container(
-                    padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: ColorManager.primary,
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                    child: CustomCircularProgressIndicator(),
-                  ),
-                ],
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  children: [
+                    SavingsGoalsCard(),
+                  ],
+                ),
               ),
             ),
           ),
