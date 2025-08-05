@@ -3,6 +3,7 @@ import 'package:fin_wise/core/widgets/fit_hieght.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/themes/color_manager.dart';
 import '../../../../../core/themes/text_style.dart';
+import 'choose_fin_type.dart';
 import 'custom_linear_progress_indicator.dart';
 import 'savings_goal_card.dart';
 
@@ -32,6 +33,8 @@ class HomeViewBody extends StatelessWidget {
                 child: Column(
                   children: [
                     SavingsGoalsCard(),
+                    SizedBox(height: 20),
+                    ChooseFinType(),
                   ],
                 ),
               ),
